@@ -1,0 +1,54 @@
+.card{
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+  padding: 20px;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .back {
+  transition:  all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+.animation {
+  /* transform: scale(1.1);
+  transition: .5s transform; */
+  animation: shake 1.5s 1 linear;
+}
+.animation-finsh{
+  animation: shake 3.5s 2 linear;
+}
+@keyframes shake {
+  0%  { transform: translate(2px, 1px)   rotate(0deg);  }
+  10% { transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { transform: translate(-3px, 0px)  rotate(3deg);  }
+  30% { transform: translate(0px, 2px)   rotate(0deg);  }
+  40% { transform: translate(1px, -1px)  rotate(1deg);  }
+  50% { transform: translate(-1px, 2px)  rotate(-1deg); }
+  60% { transform: translate(-3px, 1px)  rotate(0deg);  }
+  70% { transform: translate(2px, 1px)   rotate(-2deg); }
+  80% { transform: translate(-1px, -1px) rotate(4deg);  }
+  90% { transform: translate(2px, 2px)   rotate(0deg);  }
+  100%{ transform: translate(1px, -2px)  rotate(-1deg); }
+  }
+  
